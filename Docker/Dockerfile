@@ -9,9 +9,9 @@ wget ca-certificates python gfortran build-essential ghostscript vim libboost-al
 
 WORKDIR /home/hep
 
-ENV MG_VERSION="MG5_aMC_v2_6_3"
+ENV MG_VERSION="MG5_aMC_v2_6_3_2"
 
-RUN wget --quiet -O- https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.3.tar.gz | tar xzf -
+RUN wget --quiet -O- https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.3.2.tar.gz | tar xzf -
 WORKDIR /home/hep/${MG_VERSION}
 
 ENV ROOTSYS /usr/local
