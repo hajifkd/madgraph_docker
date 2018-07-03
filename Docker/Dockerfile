@@ -22,6 +22,9 @@ RUN echo install Delphes | /home/hep/${MG_VERSION}/bin/mg5_aMC
 RUN echo install ExRootAnalysis | /home/hep/${MG_VERSION}/bin/mg5_aMC
 RUN printf 'install pythia8\ny\n' | /home/hep/${MG_VERSION}/bin/mg5_aMC
 
+# disable autoupdate
+RUN rm /home/hep/${MG_VERSION}/input/.autoupdate
+
 WORKDIR /home/hep/${MG_VERSION}/HEPTools/lhapdf6/share/LHAPDF
 # Download a default PDF
 RUN wget --quiet -O- https://www.hepforge.org/archive/lhapdf/pdfsets/6.2/NNPDF23_lo_as_0130_qed.tar.gz | tar xzf -
